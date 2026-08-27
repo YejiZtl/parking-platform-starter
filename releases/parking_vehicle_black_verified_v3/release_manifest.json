@@ -1,0 +1,28 @@
+{
+  "release": "parking_vehicle_black_verified_v3",
+  "model": "weights/best.pt",
+  "sha256": "f59b763a4598960209043085882154c44a2e3350d10626c35fd70bcc9c24e3a3",
+  "evaluation_summary": "evaluation_summary.json",
+  "server_deploy": "SERVER_DEPLOY.txt",
+  "runtime": {
+    "config_source": "parking_config.DEFAULTS and deployment .env overrides",
+    "vehicle_class_ids": "0",
+    "conf": 0.12,
+    "iou": 0.35,
+    "imgsz": 1920,
+    "max_det": 500
+  },
+  "training_lineage": {
+    "seed_model": "runs/parking_train/vehicle_detector_black_overlap_v2/weights/best.pt",
+    "verified_train_images": 24,
+    "verified_train_instances": 3026,
+    "held_out_images": 6,
+    "held_out_instances": 745,
+    "epochs": 60,
+    "imgsz": 1536,
+    "optimizer": "AdamW",
+    "lr0": 0.0005,
+    "hsv_v": 0.55
+  },
+  "policy": "Use release-relative weights for deployment. Do not deploy directly from runs/ training directories."
+}

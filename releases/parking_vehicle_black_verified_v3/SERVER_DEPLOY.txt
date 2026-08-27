@@ -1,0 +1,27 @@
+V3 immutable release deployment reference
+
+Release model:
+releases/parking_vehicle_black_verified_v3/weights/best.pt
+
+Verify before use:
+sha256sum -c releases/parking_vehicle_black_verified_v3/best.pt.sha256
+
+Recommended runtime overrides:
+MODEL_PATH=releases/parking_vehicle_black_verified_v3/weights/best.pt
+VEHICLE_CLASS_IDS=0
+CONF=0.12
+IOU=0.35
+IMGSZ=1920
+MAX_DET=500
+SLOT_OVERLAP_THRESHOLD=0.30
+
+Deployment boundary:
+This release contains the detector artifact and evaluation summary. It does not
+prove that the server is already running V3. Confirm the active server process,
+its working directory, its .env, and its loaded model path before claiming V3 is
+deployed.
+
+Validation boundary:
+The fixed holdout is six frames from the same camera and day. Validate live
+frames across the target time and weather conditions before replacing a server
+process permanently.

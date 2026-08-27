@@ -1,0 +1,46 @@
+{
+  "model": "runs/parking_train/vehicle_detector_black_verified_v3/weights/best.pt",
+  "training": {
+    "seed_model": "runs/parking_train/vehicle_detector_black_overlap_v2/weights/best.pt",
+    "verified_train_images": 24,
+    "verified_train_instances": 3026,
+    "held_out_images": 6,
+    "held_out_instances": 745,
+    "epochs": 60,
+    "imgsz": 1536
+  },
+  "operational_comparison": {
+    "settings": {
+      "iou": 0.35,
+      "imgsz": 1920,
+      "match_iou": 0.5,
+      "dark_threshold": 95
+    },
+    "v2_conf_0_08": {
+      "predictions": 727,
+      "precision": 0.958735,
+      "overall_recall": 0.93557,
+      "dark_recall": 0.900433,
+      "non_dark_recall": 0.992933
+    },
+    "v3_conf_0_12": {
+      "predictions": 768,
+      "precision": 0.954427,
+      "overall_recall": 0.983893,
+      "dark_recall": 0.974026,
+      "non_dark_recall": 1.0
+    }
+  },
+  "fresh_camera_frames_conf_0_12": {
+    "images": 18,
+    "live_test_mean_detections": {
+      "v2": 125.67,
+      "v3": 134.0
+    },
+    "morning_mean_detections": {
+      "v2": 121.25,
+      "v3": 130.58
+    }
+  },
+  "sha256": "f59b763a4598960209043085882154c44a2e3350d10626c35fd70bcc9c24e3a3"
+}

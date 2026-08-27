@@ -1,0 +1,8 @@
+{
+  "release": "parking_vehicle_black_overlap_v2",
+  "model": "weights/best.pt",
+  "sha256": "4c41733f73f9a1e04cf4302503dc54e7d6df135547c7388d29090dad01812c70",
+  "evaluation_summary": "evaluation_summary.json",
+  "server_deploy": "SERVER_DEPLOY.txt",
+  "policy": "Use release-relative weights for deployment. Do not deploy directly from runs/ training directories."
+}

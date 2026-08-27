@@ -1,0 +1,15 @@
+V2 immutable release deployment reference
+
+Release model:
+releases/parking_vehicle_black_overlap_v2/weights/best.pt
+
+Verify before use:
+sha256sum -c releases/parking_vehicle_black_overlap_v2/best.pt.sha256
+
+Runtime override for rollback or comparison:
+MODEL_PATH=releases/parking_vehicle_black_overlap_v2/weights/best.pt
+VEHICLE_CLASS_IDS=0
+
+Deployment boundary:
+This release is retained for rollback and comparison. Do not deploy directly
+from runs/ training directories.

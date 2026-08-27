@@ -1,0 +1,16 @@
+{
+  "calibration_id": "fixed_camera_first_frame_20260817_2560x1440",
+  "reference": {
+    "image": "first_frame.jpg",
+    "size": {
+      "width": 2560,
+      "height": 1440
+    },
+    "sha256": "e4877832a0d2a4aec33918e334b04276271eee30a3b710cbf96657c4f4a218d8"
+  },
+  "regions_file": "bounding_boxes.json",
+  "regions_sha256": "ec6675676ae2eaeab120cf5480a121e41f416f54fc7c10b33a7302d13399506e",
+  "roi_file": "parking_roi.json",
+  "roi_sha256": "c1196127b1a8bb045fa77b7d8407c0530e25c45a1a61765f6a76b2628c1ab70b",
+  "expected_spaces": 122
+}
